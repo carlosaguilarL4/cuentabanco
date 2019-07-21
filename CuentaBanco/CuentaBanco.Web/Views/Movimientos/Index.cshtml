@@ -1,0 +1,12 @@
+﻿@model List<CuentaBanco.Web.Models.MovimientoModel>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Movimientos</h2>
+
+@foreach (var movimiento in Model)
+{
+    <p>@movimiento.Id @movimiento.Detalle</p>
+}
+
