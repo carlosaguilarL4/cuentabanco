@@ -1,4 +1,5 @@
-﻿@model List<CuentaBanco.Web.Models.MovimientoModel>
+﻿@model List<CuentaBanco.BL.Movimiento>
+
 @{
     ViewBag.Title = "Index";
 }
@@ -7,6 +8,8 @@
 
 @foreach (var movimiento in Model)
 {
-    <p>@movimiento.Id @movimiento.Detalle</p>
+    <p>@movimiento.Detalle</p>
 }
+
+
 
