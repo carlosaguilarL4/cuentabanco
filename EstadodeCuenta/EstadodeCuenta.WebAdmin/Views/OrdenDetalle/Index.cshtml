@@ -1,0 +1,49 @@
+﻿@model EstadodeCuenta.BL.Orden
+
+@{
+    ViewBag.Title = "Orden detalle";
+}
+
+<h2>Orden Detalle @Model.Id</h2>
+
+<p>
+    @Html.ActionLink("Nuevo Producto", "Crear")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Cliente.Nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Fecha)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Total)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Activo)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model.ListadeOrdenDetalle) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Producto.Descripcion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cantidad)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Precio)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Total)
+        </td>
+        <td>
+            @Html.ActionLink("Eliminar", "Eliminar", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>
