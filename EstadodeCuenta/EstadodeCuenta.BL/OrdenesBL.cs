@@ -21,6 +21,8 @@ namespace EstadodeCuenta.BL
         {
             ListadeOrdenes = _contexto.Ordenes
                 .Include("Cliente")
+                .OrderBy(r => r.Cliente.Nombre)
+                .ThenBy(r => r.Fecha)
                 .ToList();
 
             return ListadeOrdenes;
@@ -30,7 +32,9 @@ namespace EstadodeCuenta.BL
         {
             var listadeOrdenesDetalle = _contexto.OrdenDetalle
                 .Include("Producto")
-                .Where(o => o.OrdenId == ordenId).ToList();
+                .Where(o => o.OrdenId == ordenId)
+                .OrderBy(r => r.Id)
+                .ToList();
 
             return listadeOrdenesDetalle;
         }
