@@ -9,7 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EstadodeCuenta.WebAdmin", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EstadodeCuenta.Win", "EstadodeCuenta.Win\EstadodeCuenta.Win.csproj", "{96BD04FA-A339-4F3D-8137-B0B0F2F4453F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EstadodeCuenta.Web", "EstadodeCuenta.Web\EstadodeCuenta.Web.csproj", "{E9F130E7-B86D-4864-AD8D-B0270CAD33AD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EstadodeCuenta.Web", "EstadodeCuenta.Web\EstadodeCuenta.Web.csproj", "{9C8D25E4-FA85-46E8-8FC8-E8821F76F83B}"
+	ProjectSection(ProjectDependencies) = postProject
+		{3C4B3B54-26B3-471C-BB32-D49595F9C00D} = {3C4B3B54-26B3-471C-BB32-D49595F9C00D}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,10 +32,10 @@ Global
 		{96BD04FA-A339-4F3D-8137-B0B0F2F4453F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{96BD04FA-A339-4F3D-8137-B0B0F2F4453F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{96BD04FA-A339-4F3D-8137-B0B0F2F4453F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E9F130E7-B86D-4864-AD8D-B0270CAD33AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E9F130E7-B86D-4864-AD8D-B0270CAD33AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E9F130E7-B86D-4864-AD8D-B0270CAD33AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E9F130E7-B86D-4864-AD8D-B0270CAD33AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C8D25E4-FA85-46E8-8FC8-E8821F76F83B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C8D25E4-FA85-46E8-8FC8-E8821F76F83B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C8D25E4-FA85-46E8-8FC8-E8821F76F83B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C8D25E4-FA85-46E8-8FC8-E8821F76F83B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

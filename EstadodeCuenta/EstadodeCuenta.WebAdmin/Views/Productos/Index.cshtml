@@ -1,13 +1,13 @@
 ﻿@model IEnumerable<EstadodeCuenta.BL.Producto>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Productos";
 }
 
-<h2>Index</h2>
+<h2>Producto</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Nuevo Producto", "Crear")
 </p>
 <table class="table">
     <tr>
@@ -41,15 +41,15 @@
             @Html.DisplayFor(modelItem => item.TipoId)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.UrlImagen)
+            <img src="@item.UrlImagen" alt="@item.Descripcion" style="max-width:64px; height:auto;" />
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Activo)
         </td>
         <td>
-            @Html.ActionLink("Editar", "Editar", new { id = item.Id }) |
-            @Html.ActionLink("Detalle", "Detalle", new { id = item.Id }) |
-            @Html.ActionLink("Eliminar", "Eliminar", new { id = item.Id })
+            @Html.ActionLink("Editar", "Editar", new { id=item.Id }) |
+            @Html.ActionLink("Detalle", "Detalle", new { id=item.Id }) |
+            @Html.ActionLink("Eliminar", "Eliminar", new { id=item.Id })
         </td>
     </tr>
 }

@@ -23,7 +23,7 @@
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Precio)
+            @Html.DisplayFor(model => model.Tipo.Descripcion)
         </dd>
 
         <dt>
@@ -39,7 +39,7 @@
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.UrlImagen)
+            <img src="@Model.UrlImagen" alt="@Model.Descripcion" style="width:200px; height:auto;" />
         </dd>
 
         <dt>

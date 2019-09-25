@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
 
-namespace QuieroPizza.Web
+namespace EstadodeCuenta.Web
 {
     public class MvcApplication : System.Web.HttpApplication
     {

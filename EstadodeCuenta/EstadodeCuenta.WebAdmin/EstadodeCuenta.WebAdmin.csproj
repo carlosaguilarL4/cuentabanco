@@ -146,7 +146,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\OrdenesController.cs" />
-    <Compile Include="Controllers\OrdenesDetalleController.cs" />
+    <Compile Include="Controllers\OrdenDetalleController.cs" />
     <Compile Include="Controllers\ProductosController.cs" />
     <Compile Include="Controllers\TiposController.cs" />
     <Compile Include="Global.asax.cs">
@@ -174,17 +174,19 @@
     <Content Include="Views\Clientes\Editar.cshtml" />
     <Content Include="Views\Clientes\Detalle.cshtml" />
     <Content Include="Views\Clientes\Eliminar.cshtml" />
+    <Content Include="Views\Ordenes\Index.cshtml" />
+    <Content Include="Views\Ordenes\Crear.cshtml" />
+    <Content Include="Views\Shared\_LayoutAdmin.cshtml" />
+    <Content Include="Views\Login\Index.cshtml" />
+    <Content Include="Views\Shared\_LayoutLogin.cshtml" />
+    <Content Include="Views\Ordenes\Editar.cshtml" />
+    <Content Include="Views\Ordenes\Detalle.cshtml" />
+    <Content Include="Views\Productos\Index.cshtml" />
     <Content Include="Views\Productos\Crear.cshtml" />
     <Content Include="Views\Productos\Editar.cshtml" />
     <Content Include="Views\Productos\Detalle.cshtml" />
     <Content Include="Views\Productos\Eliminar.cshtml" />
-    <Content Include="Views\Productos\Index.cshtml" />
-    <Content Include="Views\Ordenes\Index.cshtml" />
-    <Content Include="Views\Ordenes\Crear.cshtml" />
     <Content Include="Views\OrdenDetalle\Index.cshtml" />
-    <Content Include="Views\Shared\_LayoutAdmin.cshtml" />
-    <Content Include="Views\Login\Index.cshtml" />
-    <Content Include="Views\Shared\_LayoutLogin.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -196,7 +198,6 @@
     <Folder Include="App_Data\" />
     <Folder Include="Imagenes\" />
     <Folder Include="Models\" />
-    <Folder Include="Views\OrdenesDetalle\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\EstadodeCuenta.BL\EstadodeCuenta.BL.csproj">

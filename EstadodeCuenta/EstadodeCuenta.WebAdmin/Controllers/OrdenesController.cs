@@ -9,19 +9,19 @@ namespace EstadodeCuenta.WebAdmin.Controllers
 {
     public class OrdenesController : Controller
     {
-        OrdenesBL _ordenesBL;
+        OrdenBL _ordenesBL;
         ClientesBL _clientesBL;
 
         public OrdenesController()
         {
-            _ordenesBL = new OrdenesBL();
+            _ordenesBL = new OrdenBL();
             _clientesBL = new ClientesBL();
         }
 
         // GET: Ordenes
         public ActionResult Index()
         {
-            var listadeOrdenes = _ordenesBL.ObtenerOrdenes();
+            var listadeOrdenes = _ordenesBL.ObtenerOrden();
 
             return View(listadeOrdenes);
         }

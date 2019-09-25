@@ -13,7 +13,5 @@ namespace EstadodeCuenta.BL
 
         [Required(ErrorMessage = "Ingrese una descripción")]
         public string Descripcion { get; set; }
-
-        public double Precio { get; set; }
     }
 }

@@ -26,7 +26,7 @@ namespace EstadodeCuenta.BL
         public DbSet<Tipo> Tipos { get; set; }
 
 
-        public DbSet<Orden> Ordenes { get; set; }
+        public DbSet<Orden> Orden { get; set; }
         public DbSet<OrdenDetalle> OrdenDetalle { get; set; }
     }
 }

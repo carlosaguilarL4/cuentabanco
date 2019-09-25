@@ -1,49 +1,82 @@
 ﻿<!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
-    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
-    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+    <title>EstadodeCuenta</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
+    <link rel="stylesheet" href="~/fonts/beyond_the_mountains-webfont.css" type="text/css" />
+    <!-- Stylesheets -->
+    <link href="~/plugin-frameworks/bootstrap.min.css" rel="stylesheet">
+    <link href="~/plugin-frameworks/swiper.css" rel="stylesheet">
+    <link href="~/fonts/ionicons.css" rel="stylesheet">
+    <link href="~/common/styles.css" rel="stylesheet">
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
+    <header>
         <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("EstadodeCuenta", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>
-                        @Html.ActionLink("Inicio", "Index", "Home")
-                    </li>
-                    <li>
-                        @Html.ActionLink("Lista de Clientes", "Index", "Clientes")
-                    </li>
-                    <li>
-                        @Html.ActionLink("Tipos de Cuenta", "Index", "Tipos")
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
+            <a class="logo" href="#"><img src="data:image/png;base64,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" alt="Logo"></a>
+            <div class="right-area">
+                <h6><a class="plr-20 color-white btn-fill-primary" href="#">SOLICITAR: (504) 98630205</a></h6>
+            </div><!-- right-area -->
+            <a class="menu-nav-icon" data-menu="#main-menu" href="#"><i class="ion-navicon"></i></a>
+            <ul class="main-menu font-mountainsre" id="main-menu"></ul>
+            <div class="clearfix"></div>
+        </div><!-- container -->
+    </header>
 
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-        </footer>
-    </div>
+    <section class="bg-5 h-500x main-slider pos-relative">
+        <div class="triangle-up pos-bottom"></div>
+        <div class="container h-100">
+            <div class="dplay-tbl">
+                <div class="dplay-tbl-cell center-text color-white pt-90">
+                    <h5><b>LE DAMOS LA BIENVENIDA AL SERVICIO DE ESTADODECUENTA EN LÍNEA DE BANCO , S.A.</b></h5>
+                    <h2 class="mt-30 mb-15">EstadodeCuenta</h2>
+                </div><!-- dplay-tbl-cell -->
+            </div><!-- dplay-tbl -->
+        </div><!-- container -->
+    </section>
 
-    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
-    <script src="~/Scripts/bootstrap.min.js"></script>
+    @RenderBody()
+
+    <footer class="pb-50  pt-70 pos-relative">
+        <div class="pos-top triangle-bottom"></div>
+        <div class="container-fluid">
+            <a href="index.html"><img src="data:image/png;base64,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" alt="Logo"></a>
+            <div class="pt-30">
+                <p class="underline-secondary"><b>Direccion:</b></p>
+                <p>481 Creekside Lane Avila Beach, CA 93424 </p>
+            </div>
+            <div class="pt-30">
+                <p class="underline-secondary mb-10"><b>Telefono:</b></p>
+                <a href="tel:+53 345 7953 32453 ">+53 345 7953 32453 </a>
+            </div>
+            <div class="pt-30">
+                <p class="underline-secondary mb-10"><b>Correo Electronico:</b></p>
+                <a href="mailto:yourmail@gmail.com"> yourmail@gmail.com</a>
+            </div>
+            <ul class="icon mt-30">
+                <li><a href="#"><i class="ion-social-pinterest"></i></a></li>
+                <li><a href="#"><i class="ion-social-facebook"></i></a></li>
+                <li><a href="#"><i class="ion-social-twitter"></i></a></li>
+                <li><a href="#"><i class="ion-social-dribbble-outline"></i></a></li>
+                <li><a href="#"><i class="ion-social-linkedin"></i></a></li>
+                <li><a href="#"><i class="ion-social-vimeo"></i></a></li>
+            </ul>
+            <p class="color-light font-9 mt-50 mt-sm-30">
+                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                Copyright &copy;
+                <script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            </p>
+        </div><!-- container -->
+    </footer>
+    <!-- SCIPTS -->
+    <script src="~/plugin-frameworks/jquery-3.2.1.min.js"></script>
+    <script src="~/plugin-frameworks/bootstrap.min.js"></script>
+    <script src="~/plugin-frameworks/swiper.js"></script>
+    <script src="~/common/scripts.js"></script>
 </body>
 </html>
