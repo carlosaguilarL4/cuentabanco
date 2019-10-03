@@ -7,6 +7,7 @@ using System.Web.Mvc;
 
 namespace EstadodeCuenta.WebAdmin.Controllers
 {
+    [Authorize]
     public class TiposController : Controller
     {
         TiposBL _TiposBL;
