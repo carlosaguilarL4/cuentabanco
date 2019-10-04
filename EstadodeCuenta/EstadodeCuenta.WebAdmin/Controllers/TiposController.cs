@@ -15,6 +15,7 @@ namespace EstadodeCuenta.WebAdmin.Controllers
         public TiposController()
         {
             _TiposBL = new TiposBL();
+
         }
 
         // GET: Tipos
